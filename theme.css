@@ -16,3 +16,8 @@ button {
 #save-btn {
 	background: darkgreen;
 }
+
+
+#error-btn{
+	background: darksalmon;
+}
