@@ -41,13 +41,13 @@ welcomeEl.innerText = name1 + greeting +"❤" ;
 
 let num1 = 8;
 let num2 = 2;
-let result = document.getElementById("sum-el") ;
+let sumEl = document.getElementById("sum-el") ;
 
 document.getElementById("num1-el").textContent = num1;
 document.getElementById("num2-el").textContent = num2;
 function add(){
 	let sum = num1 + num2;
-	result.textContent =  sum;
+	sumEl.textContent = "Result: " + sum;
 }
 
 function subtract(){
@@ -60,22 +60,34 @@ function multify(){
 	console.log(num1 * num2);
 }
 
+//-------------------------------------------------------
+
+/* blackjack game */
+	let firstCard = 20;
+	let secondCard = 11;
+	let sum = firstCard+secondCard;
+	let aLive = true;
+	let message= "";
+
+	if( sum < 21){
+		message = "do you want to draw a new card?";
+	
+	} else if( sum === 21){ //stricly 21
+		message = "you got blackjack";
+		
+	} else{
+		message = "you loss";
+		aLive = false;
+		
+	}
+	console.log(message);
+
+	 
+	
+	
+	
+	
 
 
-//	let sum = lap1+lap2+lap3
-//	console.log(sum)
-//}
-//sum() // call the function
 
 
-						// how to increase a number
-//let lap = 0;
-//function incrementLap() {
-//	lap = lap + 1
-//}
-
-//incrementLap()
-
-//incrementLap()
-
-//console.log(lap)
