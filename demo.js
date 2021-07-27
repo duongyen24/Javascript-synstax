@@ -34,7 +34,7 @@ let welcomeEl = document.getElementById("welcome-el");
 let name1 = "yen ";
 let greeting = "welcome";
 
-welcomeEl.innerText = name1 + greeting +"❤" ;
+//welcomeEl.innerText = name1 + greeting +"❤" ;
 
 
 //-------------------------------------------------
@@ -63,24 +63,31 @@ function multify(){
 //-------------------------------------------------------
 
 /* blackjack game */
-	let firstCard = 20;
-	let secondCard = 11;
-	let sum = firstCard+secondCard;
-	let aLive = true;
-	let message= "";
 
-	if( sum < 21){
-		message = "do you want to draw a new card?";
-	
-	} else if( sum === 21){ //stricly 21
-		message = "you got blackjack";
+let firstCard = 20;
+let secondCard = 11;
+let sum = firstCard+secondCard;
+let aLive = true;
+let message= "";
+
+
+
+	function startgame(){
+
+		if( sum < 21){
+			message = "do you want to draw a new card?";
 		
-	} else{
-		message = "you loss";
-		aLive = false;
-		
+		} else if( sum === 21){ //stricly 21
+			message = "you got blackjack";
+			
+		} else{
+			message = "you loss";
+			aLive = false;
+			
+		}
+		console.log(message);
+
 	}
-	console.log(message);
 
 	 
 	
