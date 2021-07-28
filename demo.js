@@ -62,32 +62,6 @@ function multify(){
 
 //-------------------------------------------------------
 
-/* blackjack game */
-
-let firstCard = 20;
-let secondCard = 11;
-let sum = firstCard+secondCard;
-let aLive = true;
-let message= "";
-
-
-
-	function startgame(){
-
-		if( sum < 21){
-			message = "do you want to draw a new card?";
-		
-		} else if( sum === 21){ //stricly 21
-			message = "you got blackjack";
-			
-		} else{
-			message = "you loss";
-			aLive = false;
-			
-		}
-		console.log(message);
-
-	}
 
 	 
 	
