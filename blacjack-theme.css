@@ -18,12 +18,15 @@ body{
 
 }
 
-#startgame-btn{
+button {
 	background: goldenrod;
 	color: #016f32;
 	width: 150px;
 	padding-bottom: 5px;
 	padding-top: 5px;
+	font-weight: bold;
 	border: none;
 	border-radius: 2px;
+	margin-bottom: 5px;
 }
+
