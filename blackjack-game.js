@@ -1,7 +1,8 @@
 /* blackjack game */
 
-let firstCard = 10;
+let firstCard = 3;
 let secondCard = 11;
+let cards = [firstCard, secondCard];
 let sum = firstCard+secondCard;
 let aLive = true;
 let message = "";
@@ -11,6 +12,10 @@ let sumEl = document.querySelector("#sum-el"); // query css selector. class is .
 let cardsEl = document.getElementById("cards-el");
 
 	function startgame(){
+		rendergame();
+	}
+
+	function rendergame(){
 
 		if( sum < 21){
 			message = "do you want to draw a new card?";
@@ -25,10 +30,23 @@ let cardsEl = document.getElementById("cards-el");
 		}
 		messageEl.textContent = message;
 		sumEl.textContent = "Sum: "+ sum;
-		cardsEl.textContent = "Card: "+ firstCard+" "+ secondCard; 
+		cardsEl.textContent = "Card: "+ cards[0]+" "+ cards[1]; 
 
 	}
 
-	function newgame(){
-		console.log("draw in a new card from deck");
+	function newcard(){
+
+		let card = 7;
+		sum += card;
+		cards.push(card);
+		console.log(cards);
+		rendergame();
+
+		 
+	}
+	
+
+	let arrays = [7,6,9];
+	for ( let i =0; i < arrays.length; i++){
+		console.log(arrays[i]);
 	}
