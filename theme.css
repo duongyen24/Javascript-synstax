@@ -1,3 +1,9 @@
+
+body {
+	background: palevioletred;
+	text-align: center;
+}
+
 button {
 	border: none;
 	padding-top: 10px;
@@ -19,5 +25,24 @@ button {
 
 
 #error-btn{
+	background: darksalmon;
+}
+
+div {
+	
+	width: 300px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+#apple-shelf {
+	background: darkred;
+}
+
+#orange-shelf {
 	background: darksalmon;
 }

@@ -2,12 +2,26 @@
 
 let cards = [];
 let sum = 0;
-let aLive = false;
+let isAlive = false;
+let hasBlackjack = false;
 let message = "";
 let messageEl= document.getElementById("message-el");
 //let sumEl = document.getElementById("sum-el");
 let sumEl = document.querySelector("#sum-el"); // query css selector. class is .  id is #
 let cardsEl = document.getElementById("cards-el");
+
+// create an object player. A function of an object is call method -> player.sayhi();
+let player = {
+	name : "Per",
+	chips : 145,
+	sayhi: function() {
+		console.log("hi");
+	}
+}
+
+//player.sayhi();
+let playerEl = document.getElementById("player-el");
+playerEl.textContent =  player.name + ": $" + player.chips ;
 
 
 	//gemerate random cards
@@ -21,14 +35,11 @@ let cardsEl = document.getElementById("cards-el");
 			return 10;
 		} else{
 			return random;
-		}
-		
-		
+		}		
 	}
 
-
 	function startgame(){
-		 isAlive = true;
+		isAlive = true;
 		 let firstCard = getrandomcard();
 		let secondCard = getrandomcard();
 		sum = firstCard + secondCard;
@@ -37,9 +48,7 @@ let cardsEl = document.getElementById("cards-el");
 	}
 
 	function rendergame(){
-		cardsEl.textContent = "Cards: "
-
-		
+		cardsEl.textContent = "Cards: "		
 		for ( let i = 0; i < cards.length; i++){
 			cardsEl.textContent +=  cards[i]+ " ";	
 		}
@@ -52,7 +61,7 @@ let cardsEl = document.getElementById("cards-el");
 			
 		} else{
 			message = "you loss";
-			aLive = false;
+			isAlive = false;
 			
 		}
 		messageEl.textContent = message;
@@ -61,13 +70,19 @@ let cardsEl = document.getElementById("cards-el");
 
 	}
 
-	function newcard(){
-		let card = getrandomcard();
-		sum += card;
-		cards.push(card);
-		console.log(cards);
-		rendergame();
-	} 
+
+		function newcard(){
+			if ( isAlive == true && hasBlackjack == false){
+			let card = getrandomcard();
+			sum += card;
+			cards.push(card);
+			
+			rendergame();
+			}
+		} 
+	
+
+	
 	
 
 	

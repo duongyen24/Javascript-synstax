@@ -1,10 +1,7 @@
-let hassolved = false;
-let hashint = false;
+let hands = ["rock", "paper", "scissor"];
 
-if ( hassolved == false && hashint == false){
-	showsolution();
+function play(){
+	let random = Math.floor(Math.random()*3); // making rang from 0 -> 2
+	return hands[random];
 }
-
-function showsolution(){
-	console.log("show solution");
-}
+console.log(play()) ;

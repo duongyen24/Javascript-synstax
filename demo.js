@@ -16,7 +16,7 @@ let saveEl = document.getElementById("save-el");
 function save(){
 
 	let result = count + " - ";
-	saveEl.textContent += result;  // innerText alternative	
+	saveEl.textContent += result; // innerText alternative	
 	countEl.textContent = 0; // reset count to 0
 	count = 0;
 }
@@ -24,7 +24,7 @@ function save(){
 // create error button
 let errorEl = document.getElementById("error");
 function error(){
-	errorEl.textContent = "something went wrong" ;
+	errorEl.textContent = "something went wrong";
 
 }
 
@@ -37,7 +37,7 @@ let greeting = "welcome";
 //welcomeEl.innerText = name1 + greeting +"❤" ;
 
 
-//-------------------------------------------------
+/*-------------------------------------------------
 
 let num1 = 8;
 let num2 = 2;
@@ -60,7 +60,11 @@ function multify(){
 	console.log(num1 * num2);
 }
 
-//-------------------------------------------------------
+*///-----------------------------------------------------
+
+let fruit = ["apple", "orange", "apple", "apple", "orange"];
+let appleShelf = document.getElementById("apple-shelf");
+let orangeShelf = document.getElementById("orange-shelf");
 
 
 	 
