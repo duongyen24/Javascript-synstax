@@ -1,0 +1,35 @@
+body{
+	margin: 0;
+	padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+input{
+	width: 100%;
+	padding: 10px;	
+	box-sizing: border-box;
+	border: 1px solid #5f9341;
+}
+
+button{
+	background: #5f9341;
+	font-weight: bold;
+	color: white;
+	margin-top: 5px;
+	padding: 10px 20px; /* y axis and x axis */
+	border: none;
+	
+}
+
+#box {
+	cursor: pointer;
+	background: lightseagreen;
+	padding: 40px;
+	width: 200px;
+	text-align: center;
+	margin: 20px auto;
+	color: white;
+	font-weight: bold;
+}
