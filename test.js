@@ -5,3 +5,14 @@ function play(){
 	return hands[random];
 }
 console.log(play()) ;
+
+const container = document.getElementById("container");
+container.innerHTML = "<button onclick='buy()'>"+"Buy!" + "</button>";
+
+
+function buy(){
+	container.innerHTML += "<p> thank you for buying </p>";
+}
+
+
+
