@@ -14,5 +14,13 @@ function buy(){
 	container.innerHTML += "<p> thank you for buying </p>";
 }
 
+const recipient = "James";
+const name1 = "Yen";
+const email = `
+hey ${recipient}  
+how is it going? 
+cheers ${name1}`;
+console.log(email);
+
 
 
