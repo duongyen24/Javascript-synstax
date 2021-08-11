@@ -36,7 +36,6 @@ function greet(name,callbackF){
 	console
 	console.log(`${name},  ${callbackF(name)}`);
 	//cb();
-
 }
 
 greet('yen',morning);
@@ -56,3 +55,49 @@ const total = people.reduce(function (acc, currItem){
 	acc += currItem.salary;
 	return acc;
 }, 0)
+console.log(total);
+
+
+//--------------------------------
+const date = new Date();
+const month = date.getMonth();
+console.log(date);
+
+//---------------------------------
+console.log(window);
+
+//-------------------
+function greet(){
+	console.log('hello');
+}
+
+//expression
+
+const greet1 = function(){
+	console.log('abc');
+}
+greet1();
+
+//arrow function
+const calcArea = (radius) =>{
+	return 2+2+radius;
+}
+
+const result = calcArea(5);
+console.log(result);
+
+const bill = (products, tax)=>{
+
+} 
+
+let people1 =['mario', 'yen','peter'];
+//another way
+const data = (person,stt)=>{
+	console.log(stt,person);
+}
+people1.forEach(data); //data is callback function
+
+// this is called callback function
+people1.forEach(function(person,stt){
+	console.log(stt,person);
+})
