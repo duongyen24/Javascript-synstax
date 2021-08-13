@@ -101,3 +101,13 @@ people1.forEach(data); //data is callback function
 people1.forEach(function(person,stt){
 	console.log(stt,person);
 })
+
+//basic todolist
+const items = document.querySelectorAll('li');
+items.forEach((item)=>{
+	item.addEventListener('click',(e)=>{
+		console.log(e.target); //console.log(item);
+		e.target.style.textDecoration = 'line-through';
+		
+	})
+})
