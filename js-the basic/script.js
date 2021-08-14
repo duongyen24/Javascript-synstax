@@ -104,11 +104,35 @@ people1.forEach(function(person,stt){
 
 
 //basic todolist
-const items = document.querySelectorAll('li');
-items.forEach((item)=>{
-	item.addEventListener('click',(e)=>{
-		console.log(e.target); //console.log(item);
-		e.target.style.textDecoration = 'line-through';
+//const items = document.querySelectorAll('li');
+//items.forEach((item)=>{
+//	item.addEventListener('click',(e)=>{
+//		console.log(e.target); //console.log(item);
+//		//e.target.style.textDecoration = 'line-through'; //css style
+//		console.log(e.target.remove());
 		
-	})
+//	})
+//})
+
+//add new line
+const addLine = document.querySelector('ul');
+
+const addLineBtn= document.querySelector('button');
+
+addLineBtn.addEventListener('click',() =>{
+	//addLine.innerHTML += '<li>new line </li>';
+	const li = document.createElement('li');
+	li.textContent = 'new line';
+	addLine.append(li);
 })
+
+
+addLine.addEventListener('click',(e) =>{
+	if(e.target.tagName === 'LI'){
+		e.target.remove();
+
+	}
+})
+
+
+
