@@ -102,6 +102,7 @@ people1.forEach(function(person,stt){
 	console.log(stt,person);
 })
 
+
 //basic todolist
 //const items = document.querySelectorAll('li');
 //items.forEach((item)=>{
