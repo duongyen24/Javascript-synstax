@@ -15,8 +15,8 @@ button{
 	left:0;
 	width: 100%;
 	height: 100%;
-	/* dont let this disply first */
-	display: none;
+	
+	display: none; /* dont let this display first */
 
 }
 
