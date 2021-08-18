@@ -13,3 +13,11 @@ input{
 	margin:10px auto;
 	padding: 4px;
 }
+
+.success{
+	border: 3px solid limegreen;
+}
+
+.error{
+	border: 3px solid crimson;
+}

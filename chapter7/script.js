@@ -31,9 +31,11 @@ form.addEventListener('submit', (e) => {
 
 form.username.addEventListener('keyup', e =>{
 	if(usernamePattern.test(e.target.value)){
-		console.log('passed');
+		//console.log('passed');
+    form.username.setAttribute('class','success');
 	}else{
-		console.log('failed');
+		//console.log('failed');
+    form.username.setAttribute('class','error');
 	}
 })
 
