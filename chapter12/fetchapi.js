@@ -10,15 +10,20 @@ fetch('./a.json').then((resolve)=>{
 
 //single fetch request
 const gettodo = async () =>{
-	const response = await fetch('./a.json');
+	const response = await fetch('./a1.json');
+	
+	if( response.status !=200){
+		throw new Error('error!!!');
+	}
 	const data = await response.json();
-
 	return data;
 };
 
 gettodo().then((data =>{
 	console.log(data);
-}));
+})).catch((err)=>{
+	console.log(err.message);
+});
 
 
 
