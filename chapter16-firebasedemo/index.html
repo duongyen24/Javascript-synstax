@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" co tent="IE=edge">
+	<meta name="viewport" content="width= 1.0, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Databases (Firebase)</title>
+  <style>
+    .container{
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container my-5">
+    <h2>Recipes</h2>
+    <ul>
+      
+    </ul>
+    <form>
+      <label for="recipe">Add a new recipe:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="recipe" required>
+        <div class="input-group-append">
+          <input type="submit" value="add" class="btn btn-outline-secondary">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!--firebase library-->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+
+<script>
+ 
+  var firebaseConfig = {
+    apiKey: "AIzaSyCrmIS4D4lh7s7MATRsa4V76URS2YHdya8",
+    authDomain: "js-demo-yen.firebaseapp.com",
+    projectId: "js-demo-yen",
+    storageBucket: "js-demo-yen.appspot.com",
+    messagingSenderId: "1075281296168",
+    appId: "1:1075281296168:web:6a7b93247517a15c5d6e1d",
+    measurementId: "G-H9NMPFZNB4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+	//*****************************
+  const db = firebase.firestore();
+
+  </script>
+  <script src="./app.js"></script>
+</body>
