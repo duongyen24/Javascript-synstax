@@ -1,4 +1,6 @@
 const list = document.querySelector('ul');
+const form = document.querySelector('form');
+
 
 const addRecipe = (recipe)=>{
 	let title = recipe.title;
@@ -13,11 +15,6 @@ const addRecipe = (recipe)=>{
 	`;
 	list.innerHTML += html;
 };
-
-
-
-
-
 
 
 
@@ -36,3 +33,24 @@ db.collection('recipes').get().then((snapshot) =>{
 	console.log(err);
 
 });
+
+// add data
+
+form.addEventListener('submit', e =>{
+	e.preventDefault();
+
+	const now = new Date();
+	const recipe = {
+		title: form.recipe.value, //recipe is ID
+		created_at: firebase.firestore.Timestamp.fromDate(now)
+	};
+
+	db.collection('recipes').add(recipe).then(() =>{
+		console.log('recipe add');
+	}).catch((err) =>{
+		console.log(err);
+	});
+
+});
+
+
