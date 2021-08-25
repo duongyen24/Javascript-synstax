@@ -18,22 +18,29 @@ const addRecipe = (recipe,id)=>{
 };
 
 
+//realtime data
+
+db.collection('recipes').onSnapshot(snapshot =>{
+	console.log(snapshot.docChanges());
+});
+
 
 //request data
-db.collection('recipes').get().then((snapshot) =>{
 
-	//query single data
-	//console.log(snapshot.docs[0].data());
+//db.collection('recipes').get().then((snapshot) =>{
 
-	//query all data
-	snapshot.docs.forEach(doc => {
-		addRecipe(doc.data(), doc.id); //attact id to li tag
-		//console.log(doc.data());
-	});
-}).catch((err) =>{
-	console.log(err);
+//	//query single data
+//	//console.log(snapshot.docs[0].data());
 
-});
+//	//query all data
+//	snapshot.docs.forEach(doc => {
+//		addRecipe(doc.data(), doc.id); //attact id to li tag
+//		//console.log(doc.data());
+//	});
+//}).catch((err) =>{
+//	console.log(err);
+
+//});
 
 // add data
 
@@ -59,7 +66,7 @@ form.addEventListener('submit', e =>{
 list.addEventListener('click', e => {
 	//console.log(e); check e property
 	if(e.target.tagName === 'BUTTON'){
-		const id = e.target.parentElement.getAttribute('data-id');
+		const id = e.target.parentElement.getAttribute('data-id'); 
 		db.collection('recipe').doc(id).delete().then(() =>{
 			console.log('deleted');
 		})
