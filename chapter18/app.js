@@ -12,3 +12,6 @@ console.log(result);
 const people = {name:'yen', age:26};
 const family = {...people, location:'hcm'};
 console.log(family);
+
+
+
