@@ -77,7 +77,6 @@ list.addEventListener('click', e => {
 
 
 
-
  
 
 
