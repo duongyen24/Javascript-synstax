@@ -13,3 +13,4 @@ const result = getPremium(users);
 
 console.log(users, result);
 
+console.log('auto webpack');
